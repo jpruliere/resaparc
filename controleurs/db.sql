@@ -7,7 +7,9 @@ CREATE TABLE manege (
     horaire_fermeture TIME,
     num_plan int,
     consignes TEXT,
-    PRIMARY KEY (id)
+    PRIMARY KEY (id),
+    UNIQUE (num_plan),
+    UNIQUE (nom)
 );
 
 CREATE TABLE reservation (
