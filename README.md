@@ -1,4 +1,4 @@
-# resaparc
+# Réservation de place dans les manèges d'un parc d'attraction
 Application de réservation de manèges pour un parc d'attraction
 
 - chaque visiteur du parc "Licorne Land" doit pouvoir s'identifier sur l'application avec son numéro de billet
@@ -9,11 +9,12 @@ Application de réservation de manèges pour un parc d'attraction
 
 - en option, vous pouvez commencer à concevoir une version qui tient compte de l'emplacement géographique des manèges pour l'horaire de réservation (pour éviter de mettre à 5 minutes d'intervalle 2 manèges géographiquement opposés)
 
-## base de donnée
+## Base de donnée
 utilisation de postgreSQL 10
 un connecteur PDO est créer par le fichier controleurs/config.php
+qui créer un objet PDO : $dbconnect
 
-## structure
+## Structure
 ### vues
 L'espace client
 
