@@ -1,1 +1,13 @@
- DirectoryIndex vues/connexion.php
+# Change l'index
+# DirectoryIndex "vues/connexion.php"
+# Redirect temp /zone_en_finition/ http://www.monsite.com/zone_temporaire/
+
+# Cache les fichiers .htaccess
+<Files .htaccess>
+  order allow,deny
+  deny from all
+</Files>
+
+
+# empêche de parcourir les dossiers
+Options All -Indexes
