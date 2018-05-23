@@ -6,7 +6,7 @@ class Resa {
 
 	}
 	
-	//getter
+	// getter
 	public function getId_manege(){
 		return $this->id_manege;
 	}
@@ -20,7 +20,7 @@ class Resa {
 		return $this->id;
 	}
 
-	//setter
+	// setter
 	public function setId_manege($manege){
 		$this->id_manege = $manege;
 	}
