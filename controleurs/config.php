@@ -1,17 +1,16 @@
 <?php
-// utilisation de postgreSQL 10
-// utilisateur
-$user="php";
-// mot de passage
-$pass="";
-// nom de la base de donnée
-$dbName = "reservaparc";
 
-$dsn = "pgsql:dbname=".$dbName.";host=localhost";
+require("bdd_id.php");
+// renvois : $sql_type, $sql_server, $sql_user, $sql_pass, $sql_db
 
-// connection à la base de données
-$pdo = new PDO($dsn, $user, $pass);
+try{
+	$proprietes = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
+	$dbconnect = new PDO($sql_type.':host='.$sql_server.';dbname='.$sql_db, $sql_user, $sql_pass, $proprietes);
+	$dbconnect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	echo "ok";
+}
 
-// active les message d'erreurs de la base de données
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-$pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+catch (PDOException $e) {
+	print "Erreur : " . $e->getMessage() . "<br/>";
+	die();
+}

@@ -12,6 +12,7 @@ Application de réservation de manèges pour un parc d'attraction
 ## base de donnée
 utilisation de postgreSQL 10
 un connecteur PDO est créer par le fichier controleurs/config.php
+qui créer un objet PDO : $dbconnect
 
 ## structure
 ### vues
