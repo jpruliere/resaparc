@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 $billet = $_GET['billet'];
 require_once'classBillet.php';
@@ -7,7 +8,8 @@ require_once'classBillet.php';
 // on verifi le billet
 		if ($r->validation($billet)){
 // si c'est bon, on redirige
-			header('Location:../vues/listeManege.php');
+			$_SESSION["billet"]=$billet;
+			header('Location:../vues/gestion.php');
  			exit();
 		} else {
 // si non, on renvois à la connexion
